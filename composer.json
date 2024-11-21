@@ -1,0 +1,44 @@
+{
+    "name": "f-liva/eloquent-to-raw-sql",
+    "description": "Exposes the eloquent toRawSql method to display the raw query in beautified form.",
+    "keywords": [
+        "laravel",
+        "eloquent-to-raw-sql",
+        "to-raw-sql"
+    ],
+    "homepage": "https://github.com/f-liva/eloquent-to-raw-sql",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Federico Liva",
+            "email": "mail@federicoliva.dev",
+            "role": "Developer"
+        },
+        {
+            "name": "Jan Östlund",
+            "email": "janne@eastwest.se",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "doctrine/sql-formatter": "^1.3",
+        "illuminate/contracts": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fliva\\EloquentToRawSql\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Fliva\\EloquentToRawSql\\EloquentToRawSqlServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

@@ -1,0 +1,7 @@
+name: eloquent-to-raw-sql
+services:
+  php:
+    type: php:7.3
+tooling:
+  composer:
+    service: php
