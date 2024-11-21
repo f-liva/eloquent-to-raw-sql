@@ -49,7 +49,7 @@ class EloquentToRawSqlServiceProvider extends ServiceProvider
          *                       If true, uses SqlFormatter to enhance readability.
          * @return string The raw SQL query, formatted if $beautify is true.
          */
-        EloquentBuilder::macro('toRawSql', function (bool $beautify = false) {
+        EloquentBuilder::macro('toRawSql', function (bool $beautify = true) {
             $sql = $this->getQuery()->toRawSql();
 
             return $beautify ? (new SqlFormatter)->format($sql) : $sql;

@@ -1,5 +1,7 @@
 # Eloquent toRawSql
 
+Exposes the eloquent toRawSql method to display the raw query in beautified form.
+
 ## Install
 
 `composer require f-liva/eloquent-to-raw-sql`
@@ -14,7 +16,7 @@ $products = Product
     ->orderByDesc('price')
     ->limit(10);
 
-dump($products->toRawSql());
+dump($products->toRawSql()); // Beautified SQL (as default)
 
 //    SELECT 
 //        *
@@ -28,4 +30,8 @@ dump($products->toRawSql());
 //    ORDER BY 
 //        `products`.`price` DESC
 //    LIMIT 10;
+
+dump($products->toRawSql(false)); // Unbeautified SQL
+
+//  SELECT * FROM `products` WHERE `products`.`availability` ...
 ```
